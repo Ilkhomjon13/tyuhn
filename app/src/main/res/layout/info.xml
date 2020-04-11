@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".Info">
+	<ScrollView
+		android:id="@+id/vscroll1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<LinearLayout
+			android:id="@+id/linear1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<LinearLayout
+				android:id="@+id/linear2"
+				android:layout_width="match_parent"
+				android:layout_height="400dp"
+				android:background="@drawable/work"
+				android:gravity="center_horizontal|center_vertical"
+				android:orientation="vertical">
+
+			</LinearLayout>
+			<TextView
+				android:id="@+id/textview9"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="20dp"
+				android:padding="8dp"
+				android:text="Hakamlar uchun"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				android:textColor="#2196F3"
+				android:layout_gravity="center_horizontal"/>
+			<TextView
+				android:id="@+id/textview10"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:text="Aziz hakamlar bu dastur sizlar uchun demo versia tariqasida yaratildi. \nBu dasturga hech qanday baza yaratilmagan hamda baza uchun viewlar ham bog'lab qo'yilmagan. Iltimos dastur ishlashida hato deb hisoblamagan. Biz faqat tushuncha tariqasida yaratdik."
+				android:textSize="12sp"
+				android:textColor="#616161"/>
+			<LinearLayout
+				android:id="@+id/linear23"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:orientation="horizontal">
+				<TextView
+					android:id="@+id/textview14"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:text="Talabalar uchun\nLogin: S3021602\nParol:1514826"
+					android:textSize="12sp"
+					android:textColor="#000000"/>
+				<TextView
+					android:id="@+id/textview15"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:text="O'qituvchilar uchun\nLogin: T3021602\nParol:1514826"
+					android:textSize="12sp"
+					android:textColor="#000000"/>
+				<TextView
+					android:id="@+id/textview16"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:text="Ota ona uchun\nLogin: M3021602\nParol:1514826"
+					android:textSize="12sp"
+					android:textColor="#000000"/>
+			</LinearLayout>
+			<TextView
+				android:id="@+id/textview11"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:text="Mualiflik huquqi"
+				android:textSize="14sp"
+				android:textStyle="bold"
+				android:textColor="#2196F3"
+				android:layout_gravity="center_horizontal"/>
+			<TextView
+				android:id="@+id/textview12"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:text="Bu dastur mutloq jamoa himoyasida. \nAgar bu dastur boshqalarda takrorlansa hammasi tasodif Chunki bu jamoa fikr mahsuli hisoblanadi."
+				android:textSize="12sp"
+				android:textColor="#616161"/>
+
+			<TextView
+				android:id="@+id/textview1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:gravity="center_horizontal"
+				android:hint="Jamoamizning barcha azolariga minnaddorchilik bildiramiz."
+				android:textSize="18sp"
+				android:textStyle="bold"
+				android:textColor="@color/white"/>
+
+
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>
