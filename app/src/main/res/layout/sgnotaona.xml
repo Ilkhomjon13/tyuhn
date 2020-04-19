@@ -62,7 +62,7 @@
 				android:textColor="#FFFFFF"
 				android:layout_gravity="left"/>
 			<EditText
-				android:id="@+id/edittext4"
+				android:id="@+id/username"
 				android:layout_width="match_parent"
 				android:layout_height="50dp"
 				android:hint="Login kiriting"
@@ -80,7 +80,7 @@
 				android:textColor="#FFFFFF"
 				android:layout_gravity="left"/>
 			<EditText
-				android:id="@+id/edittext5"
+				android:id="@+id/password"
 				android:layout_width="match_parent"
 				android:layout_height="50dp"
 				android:padding="8dp"

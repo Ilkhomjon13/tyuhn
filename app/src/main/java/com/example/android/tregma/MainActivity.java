@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout linear4;
     private LinearLayout linear5;
     private LinearLayout linear3;
-    private LinearLayout  linear2;
+    private LinearLayout linear2;
     private LinearLayout linear6;
     private LinearLayout linear7;
 

@@ -298,7 +298,7 @@
 							android:textSize="12sp" />
 
 						<EditText
-							android:id="@+id/edittext4"
+							android:id="@+id/username"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:textSize="12sp"
@@ -351,7 +351,7 @@
 							android:textSize="12sp" />
 
 						<EditText
-							android:id="@+id/edittext5"
+							android:id="@+id/password"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:textSize="12sp"

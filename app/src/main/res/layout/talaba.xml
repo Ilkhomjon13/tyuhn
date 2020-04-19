@@ -7,6 +7,15 @@
 	android:layout_height="match_parent"
 	android:orientation="vertical"
 	tools:context=".Talaba">
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/btnLogOut"
+		android:layout_margin="18dp"
+		android:background="#ff6861"
+		android:text="Chiqish"
+		android:textColor="@color/white"
+		android:textSize="16dp"/>
 	<ScrollView
 		android:id="@+id/vscroll1"
 		android:layout_width="match_parent"
@@ -50,7 +59,7 @@
 							android:textSize="12sp"
 							android:textColor="#000000"/>
 						<TextView
-							android:id="@+id/textview151"
+							android:id="@+id/user_details"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:padding="8dp"
@@ -73,7 +82,7 @@
 							android:textSize="12sp"
 							android:textColor="#000000"/>
 						<TextView
-							android:id="@+id/textview153"
+							android:id="@+id/level"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:padding="8dp"
@@ -95,7 +104,7 @@
 							android:textSize="12sp"
 							android:textColor="#000000"/>
 						<TextView
-							android:id="@+id/textview155"
+							android:id="@+id/profession"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:padding="8dp"
