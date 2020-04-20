@@ -24,13 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpOtaOna"/>
-        <activity android:name=".SignUpOq"/>
-        <activity android:name=".SignUpTalaba"/>
+        <activity android:name=".LoginPage"/>
         <activity android:name=".Info"/>
-        <activity android:name=".Talaba"/>
-        <activity android:name=".OtaOna"/>
-        <activity android:name=".Oqtuvchi"/>
+        <activity android:name=".Student"/>
+        <activity android:name=".Parents"/>
+        <activity android:name=".Teacher"/>
         <activity android:name=".Jurnal"/>
     </application>
 

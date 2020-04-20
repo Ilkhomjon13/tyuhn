@@ -5,13 +5,13 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class OtaOna extends AppCompatActivity {
+public class Parents extends AppCompatActivity {
     Button buttom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.otaona);
+        setContentView(R.layout.parents);
 
 
 

@@ -10,14 +10,14 @@ import com.example.android.tregma.config.SessionManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Talaba extends AppCompatActivity {
+public class Student extends AppCompatActivity {
     private Button logoutBtn;
     private SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.talaba);
+        setContentView(R.layout.student);
 
         sessionManager = new SessionManager(getApplicationContext());
         if(!sessionManager.isLoggedIn()) {
@@ -31,8 +31,7 @@ public class Talaba extends AppCompatActivity {
             ((TextView)findViewById(R.id.profession)).setText(extras.getString("profession"));
         }
 
-        logoutBtn = (Button)findViewById(R.id.btnLogOut);
-        logoutBtn.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnLogOut).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 logoutUser();
@@ -42,7 +41,7 @@ public class Talaba extends AppCompatActivity {
 
     private void logoutUser() {
         sessionManager.setLogin(false);
-        startActivity(new Intent(Talaba.this, SignUpTalaba.class));
+        startActivity(new Intent(Student.this, LoginPage.class));
         finish();
     }
 }

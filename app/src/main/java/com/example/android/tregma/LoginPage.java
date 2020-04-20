@@ -25,21 +25,20 @@ import java.util.Map;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SignUpTalaba extends AppCompatActivity {
+public class LoginPage extends AppCompatActivity {
     private Button buttom;
     private EditText username_field;
     private EditText password_field;
     private ProgressDialog progressDialog;
     private SessionManager session;
-    private Button btnLogIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sgntalaba);
+        setContentView(R.layout.page_login);
 
-        username_field = (EditText)findViewById(R.id.username);
-        password_field = (EditText)findViewById(R.id.password);
+        username_field = findViewById(R.id.username);
+        password_field = findViewById(R.id.password);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
@@ -47,11 +46,11 @@ public class SignUpTalaba extends AppCompatActivity {
         session = new SessionManager(getApplicationContext());
 
         if(session.isLoggedIn()) {
-            startActivity(new Intent(SignUpTalaba.this, Talaba.class));
+            startActivity(new Intent(LoginPage.this, Student.class));
             finish();
         }
 
-        btnLogIn = (Button) findViewById(R.id.ButtonSgnTalaba);
+        Button btnLogIn = findViewById(R.id.ButtonSgnTalaba);
 
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,7 +102,7 @@ public class SignUpTalaba extends AppCompatActivity {
                                 String level = user.getString("level");
                                 String profession = user.getString("profession");
 
-                                Intent intent = new Intent(SignUpTalaba.this, Talaba.class);
+                                Intent intent = new Intent(LoginPage.this, Student.class);
                                 intent.putExtra("name", name);
                                 intent.putExtra("surname", surname);
                                 intent.putExtra("father_name", father_name);
@@ -130,15 +129,15 @@ public class SignUpTalaba extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 // Posting parameters to login url
-                Map<String, String> params = new HashMap<String, String>();
+                Map<String, String> params = new HashMap<>();
                 params.put("username", username);
                 params.put("password", password);
 
                 return params;
             }
         };
-        if(stringRequest != null)
-             AppController.getInstance().addToRequestQueue(stringRequest, tag_string_req);
+
+        AppController.getInstance().addToRequestQueue(stringRequest, tag_string_req);
     }
 
     private void showDialog() {

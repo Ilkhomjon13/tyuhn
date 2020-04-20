@@ -7,26 +7,21 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Oqtuvchi extends AppCompatActivity {
+public class Teacher extends AppCompatActivity {
     Button buttom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.oqtuvchi);
+        setContentView(R.layout.teacher);
 
-        Button ButtonJurnal = (Button) findViewById(R.id.ButtonJurnal);
+        Button ButtonJurnal = findViewById(R.id.ButtonJurnal);
 
         ButtonJurnal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    Intent intent;
-                    intent = new Intent(Oqtuvchi.this, Jurnal.class);
-                    startActivity(intent);
+                    startActivity(new Intent(Teacher.this, Jurnal.class));
                     finish();
-                } catch (Exception e) {
-                } //tugadi
             }
         });
 
