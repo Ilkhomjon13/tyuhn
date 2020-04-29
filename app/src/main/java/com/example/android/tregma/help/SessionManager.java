@@ -1,4 +1,4 @@
-package com.example.android.tregma.config;
+package com.example.android.tregma.help;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -37,6 +37,16 @@ public class SessionManager {
         editor.commit();
 
         Log.d(TAG, "User login session modified!");
+    }
+
+    public void setUserType(String userType) {
+        editor.putString("user_type_key", userType);
+        editor.commit();
+    }
+
+    public String getUserType() {
+        return pref.getString("user_type_key", null);
+
     }
 
     public boolean isLoggedIn(){

@@ -431,7 +431,7 @@
 						android:gravity="center_horizontal"
 						android:orientation="horizontal">
 						<TextView
-							android:id="@+id/textview61"
+							android:id="@+id/user_details"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:padding="8dp"
@@ -590,7 +590,7 @@
 						android:gravity="center_horizontal"
 						android:orientation="horizontal">
 						<TextView
-							android:id="@+id/textview65"
+							android:id="@+id/profession"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:padding="8dp"

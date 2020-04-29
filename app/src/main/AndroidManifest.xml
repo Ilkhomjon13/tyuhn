@@ -27,7 +27,7 @@
         <activity android:name=".LoginPage"/>
         <activity android:name=".Info"/>
         <activity android:name=".Student"/>
-        <activity android:name=".Parents"/>
+        <activity android:name=".Parent"/>
         <activity android:name=".Teacher"/>
         <activity android:name=".Jurnal"/>
     </application>

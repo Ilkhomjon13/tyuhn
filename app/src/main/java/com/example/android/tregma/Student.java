@@ -3,16 +3,19 @@ package com.example.android.tregma;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.android.tregma.config.SessionManager;
+import com.example.android.tregma.help.SessionManager;
+import com.example.android.tregma.database.SQLiteHandler;
+
+import java.util.HashMap;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Student extends AppCompatActivity {
-    private Button logoutBtn;
+
     private SessionManager sessionManager;
+    private SQLiteHandler db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +27,15 @@ public class Student extends AppCompatActivity {
             logoutUser();
         }
 
-        Bundle extras = getIntent().getExtras();
-        if(extras != null) {
-            ((TextView)findViewById(R.id.user_details)).setText(extras.getString("name") + " " + extras.getString("surname") + " " + extras.getString("father_name"));
-            ((TextView)findViewById(R.id.level)).setText(extras.getString("level"));
-            ((TextView)findViewById(R.id.profession)).setText(extras.getString("profession"));
-        }
+        db = new SQLiteHandler(getApplicationContext());
+
+        HashMap<String, String> user = db.getUserDetails();
+
+        String userDetails = (user.get("name") + " " + user.get("surname") + " " + user.get("father_name"));
+
+        ((TextView)findViewById(R.id.user_details)).setText(userDetails);
+        ((TextView)findViewById(R.id.level)).setText(user.get("level"));
+        ((TextView)findViewById(R.id.profession)).setText(user.get("profession"));
 
         findViewById(R.id.btnLogOut).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +47,8 @@ public class Student extends AppCompatActivity {
 
     private void logoutUser() {
         sessionManager.setLogin(false);
+        db.deleteUsers();
+
         startActivity(new Intent(Student.this, LoginPage.class));
         finish();
     }

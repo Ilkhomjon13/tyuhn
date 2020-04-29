@@ -12,6 +12,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:background="@drawable/lgo"
+		android:padding="6dp"
 		android:orientation="vertical">
 		<LinearLayout
 			android:id="@+id/linear2"
@@ -87,6 +88,38 @@
 				android:textSize="16sp"
 				android:textColor="#FFFFFF"
 				android:imeOptions="actionGo"/>
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/radios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:orientation="horizontal" >
+
+                <RadioButton android:id="@+id/student_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Talaba"
+                    android:onClick="onUserTypeRadioButtonClicked"/>
+                <RadioButton android:id="@+id/parent_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="OtaOna"
+                    android:onClick="onUserTypeRadioButtonClicked"/>
+                <RadioButton android:id="@+id/teacher_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="O'qituvchi"
+                    android:onClick="onUserTypeRadioButtonClicked"/>
+            </RadioGroup>
 			<Button
 				android:id="@+id/ButtonSgnTalaba"
 				android:layout_width="match_parent"
